@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-
+import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-auth',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss'
 })
