@@ -1,0 +1,31 @@
+
+<div class="container-login w-full h-[100vh] flex justify-center items-center flex-row">
+
+    <section class="section-left w-1/3 h-full p-4 flex justify-center items-start flex-col">
+        <div class="langue">
+            <button mat-flat-button> <mat-icon>language</mat-icon>  Français</button>
+        </div>
+        <div class="form h-[90%] w-full flex justify-center items-center flex-col">
+            <div class="logo">
+                <span>
+                    <!-- <img src="../../../../assets/logo-PrimeOrigins.png" class="w-[6rem] h-[6rem]" alt="logo-PrimeOrigins"> -->
+                </span>
+            </div>
+            <div class="input-container w-full flex justify-center items-center flex-col" [formGroup]="authGroup">
+                <div class="elt__input w-[60%] flex justify-center items-end flex-row">
+                    <label for="username">Nom d'utilisateur</label>
+                    <input id="username" type="text" placeholder="Nom d'utilisateur" formControlName="username" />
+                </div>
+                <div class="elt__input w-[60%]">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="Mot de passe" formControlName="password" />
+                </div>
+                <div class="w-[60%] mt-2">
+                    <a routerLink="../registry" class="underline-offset-1">Créer un compte</a>
+                </div>
+                <button (click)="onSubmit()" class="login-btn mt-6" mat-raised-button>Connexion</button>
+            </div>
+        </div>
+    </section>
+    <section class="section-right w-2/3 h-full"></section>
+</div>

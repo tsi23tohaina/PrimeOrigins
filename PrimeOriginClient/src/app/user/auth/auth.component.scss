@@ -1,8 +1,5 @@
 $main: #05A62D;
 $secondary: #1FA641;
-.container-login{
-    // font-family: "devfest24";
-}
 .section-right{
     clip-path: polygon(1% 0, 100% 0, 100% 100%, 21% 100%);
 }
@@ -32,7 +29,7 @@ $secondary: #1FA641;
     }
 }
 .section-right{
-    background-image: url("../../../../assets/paysage-calme.jpg");
+    // background-image: url("../../../../assets/paysage-calme.jpg");
     background-position: center;
     background-size: cover;
 }

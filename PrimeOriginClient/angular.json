@@ -37,11 +37,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/prime-origin-client",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -55,12 +55,7 @@
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -79,9 +74,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -90,10 +88,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "PrimeOriginClient:build:production"
+              "browserTarget": "PrimeOriginClient:build:production"
             },
             "development": {
-              "buildTarget": "PrimeOriginClient:build:development"
+              "browserTarget": "PrimeOriginClient:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +99,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "PrimeOriginClient:build"
+            "browserTarget": "PrimeOriginClient:build"
           }
         },
         "test": {
@@ -118,7 +116,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/purple-green.css",
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -128,6 +126,6 @@
     }
   },
   "cli": {
-    "analytics": "9cf539c6-083d-4c2c-b56e-2f7e533a23a4"
+    "analytics": "3685208a-0b5b-4589-89fa-6936bba93cb0"
   }
 }

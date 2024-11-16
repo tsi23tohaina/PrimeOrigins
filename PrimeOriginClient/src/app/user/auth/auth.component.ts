@@ -1,12 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-auth',
-  standalone: false,
   templateUrl: './auth.component.html',
-  styleUrl: './auth.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-
+  styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
   constructor(
