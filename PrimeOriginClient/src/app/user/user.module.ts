@@ -5,11 +5,13 @@ import { UserRoutingModule } from './user-routing.module';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { RegistryComponent } from './registry/registry.component';
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    RegistryComponent
   ],
   imports: [
     CommonModule,

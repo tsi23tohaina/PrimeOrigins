@@ -29,9 +29,12 @@ $secondary: #1FA641;
     }
 }
 .section-right{
-    // background-image: url("../../../../assets/paysage-calme.jpg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    animation: bg 15s infinite;
+    transition: background-image 1.5s ease-in-out;
+    background-image: url("../../../assets/img/maloto.jpg");
 }
 @media screen and (max-width: 1023px)  and (min-width: 768px){
         .section-right{
