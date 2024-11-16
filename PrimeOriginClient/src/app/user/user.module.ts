@@ -17,7 +17,7 @@ import { RegistryComponent } from './registry/registry.component';
     CommonModule,
     UserRoutingModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
 
   ]
 })
