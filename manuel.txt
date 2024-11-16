@@ -1,0 +1,22 @@
+LOGIN:
+	Username
+	Password
+
+FORMULAIRE:
+	1)Information personnelles:
+		.Age
+		.Sexe
+		.Taille
+		.Poids
+	2)Antécédents médicaux:
+		.Conditions médicaux
+		.Intolérances alimentaires
+		.Antécédents Familiale
+	3)Style de vie et activité physique:
+		.Niveau d'activité physique
+		.Habitudes alimentaires
+	4)Objectifs et préférences:
+		.Objectifs de santé
+		.Préférences alimentaires
+		Restrictions culturelles ou religieuses
+	
