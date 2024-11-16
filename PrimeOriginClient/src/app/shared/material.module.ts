@@ -8,16 +8,6 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 @NgModule({
-    exports: [
-        // Import all the required modules from '@angular/material'
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        MatButtonModule,
-        MatProgressBarModule,
-        MatProgressSpinnerModule,
-    ],
     imports: [
         MatCardModule,
         MatFormFieldModule,
@@ -27,5 +17,15 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
         MatProgressBarModule,
         MatProgressSpinnerModule,
     ],
+    exports: [
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+    ]
+    
 })
 export class MaterialModules{}

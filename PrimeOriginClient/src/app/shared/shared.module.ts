@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { MaterialModules } from './material.module';
-import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -12,11 +11,9 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     SharedRoutingModule,
     MaterialModules,
-    MatCardModule
   ],
   exports: [
     MaterialModules,
-    MatCardModule
   ]
    
 })

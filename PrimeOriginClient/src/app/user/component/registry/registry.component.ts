@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-registry',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './registry.component.html',
   styleUrl: './registry.component.scss'
 })
