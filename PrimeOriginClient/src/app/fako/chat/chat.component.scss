@@ -1,0 +1,39 @@
+/* Style pour le conteneur rond */
+$main: #05A62D;
+$secondary: #1FA641;
+.chat-content{
+    box-shadow: 0 0 .25rem black;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.circle-file-upload {
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    background-color: $main; /* Couleur du cercle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  /* Masque l'élément input natif */
+  .circle-file-upload input[type="file"] {
+    opacity: 0; /* Rend l'élément invisible */
+    width: 100%; /* Prend toute la place pour être cliquable */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer; /* Pointeur interactif */
+  }
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  mat-icon{
+    cursor: pointer;
+  }
