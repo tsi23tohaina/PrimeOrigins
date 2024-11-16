@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "devfest24";
+    src: url("./assets/Gambarino_Complete/Fonts/WEB/fonts/Gambarino-Regular.woff") format("woff");
+    font-size: normal;
+    font-size: normal;
+}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:"devfest24", sans-serif; }
