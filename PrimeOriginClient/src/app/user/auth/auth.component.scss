@@ -1,0 +1,55 @@
+$main: #05A62D;
+$secondary: #1FA641;
+.section-right{
+    clip-path: polygon(1% 0, 100% 0, 100% 100%, 21% 100%);
+}
+.langue-btn{
+    background-color: #f0f0f0;
+    border-radius: 2rem;
+}
+.login-btn{
+    border-radius: .5rem;
+    border: 2px solid $main;
+}
+.elt__input{
+    margin-top: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    height: 8vh;
+    font-size: 1.1rem;
+    input{
+        padding-left: .5rem;
+        width: 100%;
+        border: 2px solid $main;
+        outline: none;
+        height: 60%;
+        border-radius: .5rem;
+    }
+}
+.section-right{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: bg 15s infinite;
+    transition: background-image 1.5s ease-in-out;
+    background-image: url("../../../assets/img/maloto.jpg");
+}
+@media screen and (max-width: 1023px)  and (min-width: 768px){
+        .section-right{
+        width: 55% !important;
+        }
+        .section-left{
+            width: 45% !important;
+        }
+}
+
+@media  screen and (max-width: 768px) {
+    .section-right{
+        display: none !important;
+    }
+    .section-left{
+        width: 100%;
+    }
+}
