@@ -1,0 +1,80 @@
+/* Style pour le conteneur rond */
+$main: #05A62D;
+$secondary: #1FA641;
+.formulaire{
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, .9);
+  box-shadow: 0 0.25rem black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  transition: background-color 1s ease-in-out;
+  mat-form-field{
+    width: 25%;
+  }
+}
+.chat-content{
+    box-shadow: 0 0 .25rem black;
+    padding: 2rem;
+    font-family: "devfest" sans-serif;
+}
+.btn-deb{
+  border-radius: 1rem;
+  box-shadow: 0 0 .25rem black;
+}
+.circle-file-upload {
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    background-color: $main; /* Couleur du cercle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: 0;
+      animation: btn 1000ms ease-in-out infinite alternate;
+    }
+  }
+  
+  /* Masque l'élément input natif */
+  .circle-file-upload input[type="file"] {
+    opacity: 0; /* Rend l'élément invisible */
+    width: 10%; /* Prend toute la place pour être cliquable */
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer; /* Pointeur interactif */
+  }
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  mat-icon{
+    cursor: pointer;
+  }
+  .icon{
+    color: $main;
+  }
+  .description{
+    box-shadow: 0 0 .25rem black;
+  }
+  @keyframes btn {
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+  }

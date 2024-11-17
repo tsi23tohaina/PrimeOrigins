@@ -1,0 +1,28 @@
+<div class="container-registry w-full h-full flex justify-center items-center flex-col overflow-x-hidden">
+    <div class="title text-[1rem] md:text-[2rem] font-bold absolute top-8 left-8 text-main">
+        <marquee behavior="" direction="left">Creer Votre Compte</marquee>
+    </div>
+    <div class="input-container w-[100%] md:w-1/2 flex justify-center items-center flex-col" [formGroup]="RegistryGroup">
+        <div class="logo text-[2rem] md:text-[5rem] font-bold">T-IA-DIO</div>
+        <div class="elt__input h-[10vh] md:h-[8vh] w-[60%] flex justify-center items-end flex-row">
+            <label for="email">Votre Email</label>
+            <input id="email" type="text" placeholder="Entrer Votre email" formControlName="email" />
+        </div>
+        <div class="elt__input h-[10vh] md:h-[8vh] w-[60%] flex justify-center items-end flex-row">
+            <label for="username">Nom d'utilisateur</label>
+            <input id="username" type="text" placeholder="Nom d'utilisateur" formControlName="username" />
+        </div>
+        <div class="elt__input h-[10vh] md:h-[8vh] w-[60%]">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" placeholder="Mot de passe" formControlName="password" />
+        </div>
+        
+        <div class="w-[60%] mt-2">
+            <a routerLink="../auth">déja un compte?</a>
+        </div>
+        <button (click)="this.registry()" class="login-btn mt-6" mat-raised-button>Connexion</button>
+    </div>
+    <div class=" cercle flex justify-end items-end flex-row">
+            <img src="../../../assets/img/earth.gif" class="rounded-full" alt="">
+    </div>
+</div>

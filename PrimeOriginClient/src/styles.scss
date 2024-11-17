@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import 'ngx-toastr/toastr';
+@font-face {
+    font-family: "devfest";
+    src: url("./assets/arkpartYmhXQy/Dosis/Dosis-VariableFont_wght.ttf") format("ttf");
+    font-weight: normal;
+    font-size: normal;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
