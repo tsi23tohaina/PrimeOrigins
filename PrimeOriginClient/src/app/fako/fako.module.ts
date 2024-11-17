@@ -6,12 +6,14 @@ import { ChatComponent } from './chat/chat.component';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FakoService } from './fako.service';
+import { FakoListComponent } from './fako-list/fako-list.component';
 
 
 
 @NgModule({
   declarations: [
-    ChatComponent
+    ChatComponent,
+    FakoListComponent
   ],
   imports: [
     CommonModule,
