@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -7,13 +8,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
+
   loading = false;
   fileName: string | null = null;
   formData = new FormData();
   responseMessage: string = ''; 
   questionState = true;
+  inputState = true;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private route: Router) {}
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -52,5 +55,12 @@ export class ChatComponent {
     } else {
       console.error('Aucun fichier sélectionné.');
     }
+  }
+  debarrasser(){
+    this.inputState= false;
+  }
+  Marcher_Conclus() {
+    this.inputState = true;
+    this.route.navigate(["fako/fako-list"]);
   }
 }
