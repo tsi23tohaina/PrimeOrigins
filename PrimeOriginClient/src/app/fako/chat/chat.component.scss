@@ -5,6 +5,7 @@ $secondary: #1FA641;
     box-shadow: 0 0 .25rem black;
     border-radius: 1rem;
     padding: 2rem;
+    font-family: "devfest" sans-serif;
 }
 .circle-file-upload {
     width: 50px; /* Largeur du cercle */
@@ -14,9 +15,19 @@ $secondary: #1FA641;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    // position: relative;
     cursor: pointer;
     overflow: hidden;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: 0;
+      animation: btn 1000ms ease-in-out infinite alternate;
+    }
   }
   
   /* Masque l'élément input natif */
@@ -42,4 +53,10 @@ $secondary: #1FA641;
   }
   .description{
     box-shadow: 0 0 .25rem black;
+  }
+  @keyframes btn {
+    0%{
+        width: 100px;
+        height: 100px;
+    }
   }

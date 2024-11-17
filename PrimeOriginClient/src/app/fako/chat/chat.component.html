@@ -2,18 +2,19 @@
     <div class="loading absolute w-1/2 flex justify-center items-center top-10">
         <mat-spinner mode="indeterminate" *ngIf="loading"></mat-spinner>
     </div>
-    <div class="chat-content w-full  md:w-1/4 h-full md:h-[90%] flex justify-between items-center flex-col">
+    <div class="chat-content w-full  md:w-full h-full md:h-full  flex justify-between items-center flex-col">
         <div class="image h-[40%]">
             <img src="../../../assets/img/bot.png" class="w-full h-full" alt="">
         </div>
         <div class="description overflow-y-auto h-[40%] flex justify-center items-center flex-col p-4 rounded-xl">
-            <p class="text-[1.2rem] w-full h-full text-main font-bold" *ngIf="questionState">
+            <p class="text-[1.2rem] w-full h-full" *ngIf="questionState">
                 Donner une dexieme vie à votre dechet!! <br>
                 Upload le photo de dechet et tu verra !!
             </p>
             <span class="message text-[1.2rem] w-full h-full p-4">{{responseMessage}}</span>
+            <button mat-icon-button  *ngIf="!questionState">Debarasser le!!</button>
         </div>        
-        <div class="foot flex justify-around items-center flex-row w-full">
+        <div class="foot flex justify-around items-center flex-row w-full md:w-1/4">
             <button mat-icon-button> <mat-icon class="icon">camera_enhance</mat-icon> </button>
             <div class="circle-file-upload cursor-pointer">
                 <input type="file" id="fileInput" (change)="onFileSelected($event)">
