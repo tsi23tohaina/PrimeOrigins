@@ -33,8 +33,8 @@ $secondary: #1FA641;
   /* Masque l'élément input natif */
   .circle-file-upload input[type="file"] {
     opacity: 0; /* Rend l'élément invisible */
-    width: 100%; /* Prend toute la place pour être cliquable */
-    height: 100%;
+    width: 10%; /* Prend toute la place pour être cliquable */
+    height: 10%;
     position: absolute;
     top: 0;
     left: 0;
