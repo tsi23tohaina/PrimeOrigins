@@ -2,22 +2,24 @@
     <div class="loading absolute w-1/2 flex justify-center items-center top-10">
         <mat-spinner mode="indeterminate" *ngIf="loading"></mat-spinner>
     </div>
-    <div class="chat-content w-1/4 h-[90%] flex justify-between items-center flex-col">
-        <div class="image h-[50%]">
-            <img src="../../../assets/img/bot.png" class="w-full" alt="">
+    <div class="chat-content w-full  md:w-1/4 h-full md:h-[90%] flex justify-between items-center flex-col">
+        <div class="image h-[40%]">
+            <img src="../../../assets/img/bot.png" class="w-full h-full" alt="">
         </div>
-        <div class="description">
-            <span class="text-[1.2rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, natus. Iusto vitae adipisci saepe accusamus!
-            </span>
-        </div>
+        <div class="description overflow-y-auto h-[40%] flex justify-center items-center flex-col p-4 rounded-xl">
+            <p class="text-[1.2rem] w-full h-full text-main font-bold" *ngIf="questionState">
+                Donner une dexieme vie à votre dechet!! <br>
+                Upload le photo de dechet et tu verra !!
+            </p>
+            <span class="message text-[1.2rem] w-full h-full p-4">{{responseMessage}}</span>
+        </div>        
         <div class="foot flex justify-around items-center flex-row w-full">
-            <button mat-icon-button> <mat-icon>camera_enhance</mat-icon> </button>
+            <button mat-icon-button> <mat-icon class="icon">camera_enhance</mat-icon> </button>
             <div class="circle-file-upload cursor-pointer">
                 <input type="file" id="fileInput" (change)="onFileSelected($event)">
                 <mat-icon>cloud_upload</mat-icon>
             </div>
-            <button mat-icon-button (click)="analyse()"> <mat-icon>send</mat-icon> </button>
+            <button mat-icon-button (click)="analyse()"> <mat-icon class="icon">send</mat-icon> </button>
         </div>
     </div>
 </div>

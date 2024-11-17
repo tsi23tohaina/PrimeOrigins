@@ -8,7 +8,7 @@ export class FakoService {
 
   constructor(private http: HttpClient) { }
   
-  analyseImage(file: FormData){
-    return  this.http.post("127.0.0.1:5000/upload", file);
+  analyseImage(file: any){
+    return  this.http.post("http://10.166.2.156:8000/upload", file);
   }
 }
