@@ -23,7 +23,7 @@ export class ChatComponent {
       this.fileName = file.name;
       // Ajoutez les autres champs
       this.formData.append('file', file);
-      this.formData.append('sms', 'Donner une deuxime vie à cette image en proposant 3 ideé en forme ');
+      this.formData.append('sms', 'donner moi seulment trois idées seulment pour recyler cette dechet');
       // this.formData.append('iteration', '1'); // ou autre valeur
     } else {
       this.fileName = null;

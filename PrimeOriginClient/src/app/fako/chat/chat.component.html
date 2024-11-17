@@ -3,13 +3,15 @@
         <mat-spinner mode="indeterminate" *ngIf="loading"></mat-spinner>
     </div>
     <div class="chat-content w-full  md:w-full h-full md:h-full  flex justify-between items-center flex-col">
-        <div class="image h-[40%]">
+        <div class="image h-[40%] relative w-full md:w-auto">
+            <mat-card-actions class="w-full flex justify-end items-end">
+                <button mat-flat-button class="btn-deb">Debarasser!!!</button>
+            </mat-card-actions>
             <img src="../../../assets/img/bot.png" class="w-full h-full" alt="">
         </div>
-        <div class="description overflow-y-auto h-[40%] flex justify-center items-center flex-col p-4 rounded-xl">
-            <p class="text-[1.2rem] w-full h-full" *ngIf="questionState">
-                Donner une dexieme vie à votre dechet!! <br>
-                Upload le photo de dechet et tu verra !!
+        <div class="description overflow-y-auto h-[40%] w-full md:w-1/5 flex justify-center items-center flex-col p-4 rounded-xl">
+            <p class="text-[1.1rem] w-full h-full" *ngIf="questionState">
+                Donner une dexieme vie à votre dechet!!
             </p>
             <span class="message text-[1.2rem] w-full h-full p-4">{{responseMessage}}</span>
             <button mat-icon-button  *ngIf="!questionState">Debarasser le!!</button>
@@ -22,5 +24,17 @@
             </div>
             <button mat-icon-button (click)="analyse()"> <mat-icon class="icon">send</mat-icon> </button>
         </div>
+    </div>
+
+    <div class="formulaire absolute z-10 w-full h-[100vh]">
+        <mat-form-field appearance="fill">
+            <mat-label>Nom du dechet</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Prix</mat-label>
+            <input matInput type="text">
+        </mat-form-field>
+        <button mat-raised-button>Marcher conclus</button>
     </div>
 </div>
