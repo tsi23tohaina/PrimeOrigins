@@ -37,3 +37,9 @@ $secondary: #1FA641;
   mat-icon{
     cursor: pointer;
   }
+  .icon{
+    color: $main;
+  }
+  .description{
+    box-shadow: 0 0 .25rem black;
+  }
