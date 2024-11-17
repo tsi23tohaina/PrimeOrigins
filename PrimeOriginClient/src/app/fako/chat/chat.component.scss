@@ -78,3 +78,11 @@ $secondary: #1FA641;
         height: 100px;
     }
   }
+
+  @media screen and (max-width:768px) {
+      .formulaire{
+        mat-form-field{
+          width: 90%;
+        }
+      }
+  }
