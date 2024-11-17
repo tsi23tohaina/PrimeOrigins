@@ -9,6 +9,11 @@ $secondary: #1FA641;
     border-radius: .5rem;
     border: 2px solid $main;
 }
+.container-registry{
+    overflow: hidden !important;
+    position: relative;
+    font-family: "devfest" sans-serif;
+}
 .elt__input{
     margin-top: 2rem;
     display: flex;
@@ -34,4 +39,17 @@ $secondary: #1FA641;
     .section-left{
         width: 100%;
     }
+}
+.cercle{
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    // border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+    bottom: -100px;
+    right: -60px;
+    background-color: $main;
+    clip-path: polygon(99% 0, 100% 0, 100% 100%, 0% 100%);
 }

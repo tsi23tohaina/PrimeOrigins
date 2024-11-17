@@ -14,7 +14,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
         MatButtonModule,
         MatProgressBarModule,
         MatProgressSpinnerModule,
-        MatInputModule
+        MatInputModule,
+        
     ],
     exports: [
         MatCardModule,
@@ -23,7 +24,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
         MatButtonModule,
         MatProgressBarModule,
         MatProgressSpinnerModule,
-        MatInputModule
+        MatInputModule,
+        
     ]
     
 })
