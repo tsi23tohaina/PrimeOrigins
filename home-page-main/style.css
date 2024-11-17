@@ -1,6 +1,6 @@
 /*------ Variables ------*/
 :root {
-  --green: #00ff84;
+  --green: #05A62D;
   --white: #ECFFE6;
   --pink: #FFAAAA;
   --pink-be: #FF7777;
@@ -25,6 +25,9 @@
 *:not(i) {
   font-family: "Poppins", sans-serif;
 }
+.description{
+  width: 60%;
+}
 body{
   overflow-x: hidden;
 }
@@ -34,7 +37,8 @@ html {
 }
 /*------ Utility Classes ------*/
 #logo{
-  color: var(--pink-be) !important;
+  color: var(--green) !important;
+  font-size: 3rem;
 }
 section,
 footer {
@@ -138,12 +142,25 @@ nav a {
   font-size: var(--heading-font-size-4);
   text-decoration: none;
 }
-nav a#logo {
+nav a #logo {
   color: var(--black-shade-1);
   font-weight: 700;
 }
 nav ul a {
-  color: var(--white-shade-1);
+  color: rgba(0, 0, 0, 0.615) !important;
+  text-decoration: none !important ;
+  position: relative;
+}
+a::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: .2rem;
+  transition: 250ms ease-in-out;
+}
+a::before:hover{
+  width: 100%;
 }
 nav img{
   width: 90px;
